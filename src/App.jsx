@@ -24,7 +24,17 @@ const imageData = ()=>{
 }
 
 function App() {
-  // code here
+  return (
+    <>
+      <h1 style={{textAlign:"center"}}>Kalvium Gallery</h1>
+      <div className="image-container">
+        {imageData().map((item) => (
+          <img key={item.id} src={item.img} alt={`elephant-${item.id}`} />
+        ))}
+      </div>
+    </>
+
+  );
 }
 
 export default App;
